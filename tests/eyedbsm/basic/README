@@ -1,0 +1,30 @@
+
+tests/eyedbsm help
+
+0. Compiling
+make check
+
+1. Creating a test database
+
+sh dbcreate.sh foo
+
+it echoes something like:
+DB=DATABASE_FULL_PATH
+-> copy and paste this line and execute it in your shell
+
+2. Creating an hash index
+./hcreate $DB hoid
+
+hoid is the file where the oid is stored (binary form) for future uses
+
+3. Inserting elements in the index
+to insert 100 (pseudo) random data in this index:
+./hinsert $DB hoid 100
+
+4. Reading the index
+
+to read the index:
+./hread $DB hoid
+
+and to display elements:
+./hread -verbose $DB hoid

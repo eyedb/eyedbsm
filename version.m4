@@ -1,0 +1,12 @@
+dnl define the EyeDB-SM version
+define([PRODUCT_NAME], [EyeDB - Storage Manager])
+define([PRODUCT_TARNAME], [eyedbsm])
+define([PRODUCT_VERSION_MAJOR], [2])
+define([PRODUCT_VERSION_MINOR], [9])
+define([PRODUCT_VERSION_PATCH], [2])
+define([PRODUCT_VERSION_STATUS], [])
+define([PRODUCT_BUGREPORT], [eyedb-dev@lists.sourceforge.net])
+m4_append([PRODUCT_VERSION], [PRODUCT_VERSION_MAJOR])
+m4_append([PRODUCT_VERSION], [PRODUCT_VERSION_MINOR], [[.]])
+m4_append([PRODUCT_VERSION], [PRODUCT_VERSION_PATCH], [[.]])
+m4_append([PRODUCT_VERSION], [PRODUCT_VERSION_STATUS], [[]])
