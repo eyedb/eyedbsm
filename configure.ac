@@ -21,9 +21,6 @@ AC_CONFIG_SRCDIR([include/eyedbsm/eyedbsm.h])
 
 AM_INIT_AUTOMAKE(foreign)
 
-# FD TO CHECK
-# which one to use???
-
 #
 # Checks for command line flags
 #

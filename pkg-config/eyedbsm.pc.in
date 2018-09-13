@@ -9,6 +9,6 @@ Name: EyeDB Storage Manager
 Description: Object Oriented Storage Manager
 Version: ${version} 
 Requires:
-Libs:-L${libdir} -leyedbrpcfe -leyedbsm -leyedbutils ${eyedb_arch_libs}
+Libs:-L${libdir} -leyedbrpcfe -leyedbsm -leyedbutils ${eyedbsm_arch_libs}
 Cflags: -I${includedir} 
 
