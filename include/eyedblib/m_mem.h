@@ -26,6 +26,8 @@
 #define _EYEDBLIB_M_MEM_H
 
 #include <sys/types.h>
+#include <iostream>
+#include <vector>
 
 enum m_MapFlags {
   M_LOCAL_FS_MODE = 0x1,
@@ -39,7 +41,39 @@ enum m_MapFlags {
 
 typedef struct m_Map m_Map;
 
+extern m_Map *m_mmap(caddr_t addr, size_t len, int prot, int flags,
+		     int fildes, off_t off, caddr_t *p, const char *file,
+		     off_t startns, off_t endns, m_Map* map = NULL);
+
+extern int m_munmap(m_Map *map, caddr_t addr, size_t len);
+
+extern u_int m_data_margin_set(u_int data_margin);
+
+extern void m_init(void);
+extern void m_init_flags(unsigned int flags);
+extern void m_access(m_Map *map);
+extern void m_lock(m_Map *m);
+extern void m_unlock(m_Map *m);
+extern void m_gtrig_set(m_Map *m, void (*gtrig)(void *client_data), void *client_data);
+  
+extern void *m_malloc(size_t len);
+extern void *m_calloc(size_t nelem, size_t elsize);
+extern void *m_realloc(void *ptr, size_t size);
+extern void m_free(void *ptr);
+
+extern void m_abort(void);
+extern void m_abort_msg(const char *fmt, ...);
+extern void m_mmaps_garbage(void);
+extern void m_maptrace(std::ostream &);
+
+extern size_t m_get_totalsize();
 extern size_t m_get_maxsize();
 extern void m_set_maxsize(size_t);
+
+extern void m_display();
+extern void m_unmmap_all();
+
+extern void m_munmap_for_remap(int fd, std::vector<m_Map*>& m_map_v);
+extern m_Map* m_remap(const std::vector<m_Map*>& m_map_v);
 
 #endif
