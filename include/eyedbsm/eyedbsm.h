@@ -640,6 +640,12 @@ namespace eyedbsm {
   transactionLockSet(DbHandle const *dbh, ObjectLockMode lockmode,
 		     ObjectLockMode *olockmode);
 
+  extern int
+  getTransactionCount(DbHandle const *dbh);
+
+  extern int
+  getXID(DbHandle const *dbh);
+
   extern const char *
   getOPString(OP op);
 

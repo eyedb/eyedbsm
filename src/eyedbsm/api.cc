@@ -214,6 +214,18 @@ return (((S).err == SUCCESS) ? Success : &(S))
     return isPhy((DbHandle *)dbh, oid);
   }
 
+  extern int
+  getTransactionCount(DbHandle const *dbh)
+  {
+    return dbh->tr_cnt;
+  }
+
+  extern int
+  getXID(DbHandle const *dbh)
+  {
+    return dbh->xid;
+  }
+
   Status
   objectDelete(DbHandle const *dbh, Oid const *const oid)
   {
