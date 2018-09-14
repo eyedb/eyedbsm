@@ -40,22 +40,6 @@
 
 namespace eyedbsm {
 
-  struct ObjectHeaderV2 { // V3_storage_size_t
-    unsigned int unique;
-    unsigned int size;
-    Oid prot_oid;
-  };
-
-  struct ObjectHeaderV3 { // V3_storage_size_t
-    unsigned int unique;
-    size_t size;
-  };
-
-  union ObjectHeader { // V3_storage_size_t
-    ObjectHeaderV2 objh_v2;
-    ObjectHeaderV3 objh_v3;
-  };
-
 #define ESM_IND_OID
 
   static const unsigned int MAGIC = 0xa81726e1U;
@@ -169,7 +153,7 @@ namespace eyedbsm {
     Oid prot_list_oid;
   };
 
-  #define OIDLOCSIZE 6
+#define OIDLOCSIZE 6
 
 #ifdef HAVE_SEMAPHORE_POLICY_SYSV_IPC
 #define ESM_NSEMS 2

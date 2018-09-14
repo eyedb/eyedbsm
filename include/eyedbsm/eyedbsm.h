@@ -97,6 +97,22 @@ namespace eyedbsm {
     static Oid makeNullOid();
   };
 
+  struct ObjectHeaderV2 { // V3_storage_size_t
+    unsigned int unique;
+    unsigned int size;
+    Oid prot_oid;
+  };
+
+  struct ObjectHeaderV3 { // V3_storage_size_t
+    unsigned int unique;
+    size_t size;
+  };
+
+  union ObjectHeader { // V3_storage_size_t
+    ObjectHeaderV2 objh_v2;
+    ObjectHeaderV3 objh_v3;
+  };
+
   enum Boolean {
     False = 0,
     True  = 1

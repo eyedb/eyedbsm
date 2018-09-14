@@ -68,9 +68,7 @@ IdxP.h \
 kern.h \
 kern_p.h \
 lock.h \
-mutex.h \
 transaction.h \
 xdr_off.h \
-xdr_p.h \
-xm_alloc.h
+xdr_p.h 
 
