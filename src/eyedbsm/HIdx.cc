@@ -43,6 +43,8 @@
 #include <eyedbsm/xdr.h>
 #include <eyedblib/log.h>
 #include <eyedblib/m_mem.h>
+
+// FD CHECK: include a lib/ private header
 #include "lib/m_mem_p.h"
 
 #include <map>

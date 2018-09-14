@@ -72,8 +72,6 @@ extern void m_mmaps_garbage(void);
 extern void m_maptrace(std::ostream &);
 
 extern size_t m_get_totalsize();
-extern size_t m_get_maxsize();
-extern void m_set_maxsize(size_t);
 
 extern void m_display();
 extern void m_unmmap_all();

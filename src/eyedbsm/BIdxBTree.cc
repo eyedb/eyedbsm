@@ -40,6 +40,8 @@
 #include <eyedblib/strutils.h>
 
 #include <eyedblib/m_mem.h>
+
+// FD CHECK: include a lib/ private header
 #include "lib/m_mem_p.h"
 
 #include <eyedblib/log.h>

@@ -28,6 +28,8 @@
 #include "eyedbsm_p.h"
 
 #include <eyedblib/rpc_lib.h>
+
+// FD CHECK: include a lib/ private header
 #include <lib/m_mem_p.h>
 
 #include "transaction.h"

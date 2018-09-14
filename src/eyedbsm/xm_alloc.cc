@@ -46,8 +46,9 @@
 
 #include "xm_alloc.h"
 #include <eyedblib/m_mem.h>
-#include "lib/m_mem_p.h"
 
+// FD CHECK: include a lib/ private header
+#include "lib/m_mem_p.h"
 namespace eyedbsm {
 
 #define XM_MAGIC           ((unsigned int)0xEF18D467)

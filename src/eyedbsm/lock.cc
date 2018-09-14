@@ -39,6 +39,8 @@
 #include <eyedblib/iassert.h>
 #include <eyedblib/rpc_be.h>
 #include <eyedblib/log.h>
+
+// FD CHECK: include a lib/ private header
 #include <lib/m_mem_p.h>
 
 #define TRACE(X) /*(X, fflush(stdout))*/

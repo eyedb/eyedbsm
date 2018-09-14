@@ -56,6 +56,8 @@
 #include <eyedblib/semlib.h>
 #include <eyedblib/log.h>
 #include <pwd.h>
+
+// FD CHECK: include a lib/ private header
 #include <lib/m_mem_p.h>
 
 namespace eyedbsm {

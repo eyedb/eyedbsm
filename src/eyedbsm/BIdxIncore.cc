@@ -34,6 +34,8 @@
 #include <eyedbsm/eyedbsm.h>
 #include	"BIdxBTree.h"
 #include <eyedblib/m_mem.h>
+
+// FD CHECK: include a lib/ private header
 #include "lib/m_mem_p.h"
 
 //#define USE_CACHE

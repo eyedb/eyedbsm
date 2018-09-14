@@ -35,6 +35,8 @@
 // added 4/05
 #include "eyedbsm_p.h"
 #include <eyedblib/m_mem.h>
+
+// FD CHECK: include a lib/ private header
 #include "lib/m_mem_p.h"
 
 namespace eyedbsm {

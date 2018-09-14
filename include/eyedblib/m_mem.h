@@ -25,6 +25,8 @@
 #ifndef _EYEDBLIB_M_MEM_H
 #define _EYEDBLIB_M_MEM_H
 
+#include <sys/types.h>
+
 enum m_MapFlags {
   M_LOCAL_FS_MODE = 0x1,
   M_NFS_FIX_FTRUNCATE_MODE = 0x2,
@@ -36,5 +38,8 @@ enum m_MapFlags {
 };
 
 typedef struct m_Map m_Map;
+
+extern size_t m_get_maxsize();
+extern void m_set_maxsize(size_t);
 
 #endif

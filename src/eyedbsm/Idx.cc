@@ -36,6 +36,8 @@
 #include <eyedblib/machtypes.h>
 #include <eyedblib/rpc_lib.h>
 #include <eyedblib/m_mem.h>
+
+// FD CHECK: include a lib/ private header
 #include "lib/m_mem_p.h"
 
 #include <fstream>
