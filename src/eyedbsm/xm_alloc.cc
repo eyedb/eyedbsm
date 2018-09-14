@@ -39,12 +39,12 @@
 
 #ifdef XM_ESM_MUTEX
 #include <eyedbsm_p.h>
-#include <mutex.h>
+#include <eyedbsm/mutex.h>
 #elif defined(XM_CONCURRENT)
 #include <pthread.h>
 #endif
 
-#include "xm_alloc.h"
+#include <eyedbsm/xm_alloc.h>
 #include <eyedblib/m_mem.h>
 
 // FD CHECK: include a lib/ private header

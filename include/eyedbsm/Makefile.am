@@ -4,5 +4,7 @@ BIdx.h \
 eyedbsm.h \
 HIdx.h \
 Idx.h \
+mutex.h \
 smd.h \
-xdr.h 
+xdr.h \
+xm_alloc.h

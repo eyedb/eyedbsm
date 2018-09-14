@@ -26,7 +26,7 @@
 #define _EYEDBSM_KERN_H
 
 #include <eyedbsm/eyedbsm.h>
-#include "xm_alloc.h"
+#include <eyedbsm/xm_alloc.h>
 
 namespace eyedbsm {
 

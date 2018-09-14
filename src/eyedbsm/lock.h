@@ -23,8 +23,8 @@
 
 
 #include <eyedbsm_p.h>
+#include <eyedbsm/mutex.h>
 #include <transaction.h>
-#include <mutex.h>
 
 namespace eyedbsm {
   extern void lockInit(DbDescription *, DbLock *, const char *name);

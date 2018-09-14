@@ -26,7 +26,7 @@
 #define _EYEDBSM_TRANSACTION_H
 
 #include <time.h>
-#include "xm_alloc.h"
+#include <eyedbsm/xm_alloc.h>
 #include <eyedblib/thread.h>
 #include <eyedbsm/eyedbsm.h>
 #include "eyedbsm/mutex.h"

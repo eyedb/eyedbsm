@@ -41,7 +41,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "eyedbsm_p.h"
-#include "mutex.h"
+#include <eyedbsm/mutex.h>
 
 #ifdef HAVE_SEMAPHORE_POLICY_SYSV_IPC
 #include <sys/sem.h>
