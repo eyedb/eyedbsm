@@ -22,13 +22,13 @@ If compiling from a `git clone`, you will also need:
 
 Please refer to your distribution to check if these tools are packaged for your distribution (which is very likely the case) and to get their respective installation instructions.
 
-### Prerequisites installation for Debian/Ubuntu
+#### Prerequisites installation for Debian/Ubuntu
 
 ```
 apt-get install autoconf libtool make g++ pkg-config
 ```
 
-### Prerequisites installation for CentOS/Fedora
+#### Prerequisites installation for CentOS/Fedora
 
 ```
 yum -y install git autoconf libtool make gcc-c++ pkgconfig
