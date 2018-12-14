@@ -43,28 +43,36 @@ If compiling from a `git clone` and not from a tarball, first run:
 make
 ```
 
-Then, to compile EyeDB Storage Manager, run:
+Then, run `configure` script:
 
 ```
 ./configure
-make
 ```
 
 `configure` script takes the following useful options:
 
 ```
---prefix=PREFIX         to specify installation root directory 
-                        (default is /usr)
---enable-debug          to compile with debug (default is no)
---enable-optimize=flag  to compile with given optimization flag, for 
-                        instance --enable-optimize=-O2 (default is no 
-                        optimization)
+--prefix=PREFIX
+            to specify installation root directory 
+            (default is /usr)
+--enable-debug
+            to compile with debug (default is no)
+--enable-optimize=FLAG
+            to compile with given optimization flag, for 
+            instance --enable-optimize=-O2
+            (default is no optimization)
 ```
 
 Full description of `configure` options can be obtained with:
 
 ```
 ./configure --help
+```
+
+Once `configure` script executed, compilation can be launched by:
+
+```
+make
 ```
 
 ### Installing
