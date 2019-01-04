@@ -18,6 +18,7 @@ In order to compile EyeDB Storage Manager, you need the following tools:
 If compiling from a `git clone`, you will also need:
 
 * autoconf
+* automake
 * libtool
 
 Please refer to your distribution to check if these tools are packaged for your distribution (which is very likely the case) and to get their respective installation instructions.
@@ -34,13 +35,20 @@ apt-get install autoconf libtool make g++ pkg-config
 yum -y install git autoconf libtool make gcc-c++ pkgconfig
 ```
 
+#### Prerequisites installation for macos
+
+First, install Howebrew (https://brew.sh/)
+
+```
+brew install automake libtool
+```
+
 ### Compiling
 
 If compiling from a `git clone` and not from a tarball, first run:
 
 ```
 ./autogen.sh
-make
 ```
 
 Then, run `configure` script:
