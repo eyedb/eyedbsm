@@ -101,6 +101,10 @@ namespace eyedbsm {
 
   struct DbDescription;
 
+  // FD add
+  extern size_t dbDescriptionSize();
+  extern int *dbDescriptionSemkeys(DbDescription *);
+
   extern void mutexLightInit(DbDescription *vd, Mutex *mp, MutexP *pmp);
   //  mutexLightInit(int semkeys[], int *plocked, Mutex *mp, MutexP *pmp);
 

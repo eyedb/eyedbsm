@@ -48,12 +48,18 @@
 #include <eyedbsm/smd.h>
 #include "lib/compile_builtin.h"
 
+#include <stdio.h>
+
+
 smdcli_conn_t *
 smdcli_open(const char *port)
 {
   struct sockaddr_un sock_un_name;
   struct sockaddr *sock_addr;
   int sock_fd;
+
+  // FD debug
+  fprintf(stderr, "smdcli_open(%s)\n", port);
 
   sock_un_name.sun_family = AF_UNIX;
   strcpy(sock_un_name.sun_path, port);
@@ -262,5 +268,8 @@ const char *smd_get_port()
 
 void smd_set_port(const char *port)
 {
+  // FD debug
+  fprintf(stderr, "smd_set_port(%s)\n", port);
+
   smd_port = std::string(port);
 }

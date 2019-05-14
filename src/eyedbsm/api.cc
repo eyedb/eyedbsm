@@ -757,4 +757,20 @@ return (((S).err == SUCCESS) ? Success : &(S))
     return ESM_registerGet((DbHandle *)dbh, preg);
   }
 
+  // FD: added
+  size_t dbDescriptionSize()
+  {
+    return sizeof(eyedbsm::DbDescription);
+  }
+
+  // FD: added
+  int *dbDescriptionSemkeys(DbDescription *vd)
+  {
+#ifdef HAVE_SEMAPHORE_POLICY_SYSV_IPC
+    return vd->semkeys;
+#else
+    return 0;
+#endif
+  }
+  
 }
